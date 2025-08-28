@@ -1,135 +1,134 @@
-## all thanks to [palladian](https://github.com/palladian1)
+## todo gracias a [palladian](https://github.com/palladian1)
 
-### General Tips
+### Consejos Generales
 
-* Read chapter 9 in the OSTEP book and watch the video for discussion 5. Lottery ticket schedulers aren't discussed in the lectures, so you really do have to read the book for this one.
+- Lee el capítulo 9 del libro OSTEP y mira el video de la discusión 5. Los planificadores de lotería no se discuten en las conferencias, así que realmente tienes que leer el libro para este proyecto.
 
-* In general, you can't use C standard library functions inside the kernel, because the kernel has to initialize before it can execute library binaries.
+- En general, no puedes usar funciones de la biblioteca estándar de C dentro del kernel, porque el kernel tiene que inicializarse antes de poder ejecutar binarios de bibliotecas.
 
-* The xv6 kernel has a "kernel version" of `printf`; it takes an additional integer argument that tells it whether to print to `stdout` or `stderr`. Note that it can only handle basic format strings like `"%d"` and not more complex ones like `"%6.3g"`; you can deal with this by manually adding spaces instead. It also has another similar function, `cprintf`.
+- El kernel de xv6 tiene una versión "de kernel" de `printf`; toma un argumento entero adicional que le indica si debe imprimir en `stdout` o `stderr`. Ten en cuenta que solo puede manejar cadenas de formato básicas como `"%d"` y no otras más complejas como `"%6.3g"`; puedes resolver esto agregando espacios manualmente. También tiene otra función similar, `cprintf`.
 
-* If you do want to use other library functions that aren't available inside the kernel (pseudo random number generators), you can see how those functions are implemented in P.J. Plauger's book, The Standard C Library, and then implement them yourself.
+- Si deseas usar otras funciones de biblioteca que no están disponibles dentro del kernel (generadores de números pseudoaleatorios), puedes ver cómo se implementan esas funciones en el libro de P.J. Plauger, *The Standard C Library*, y luego implementarlas tú mismo.
 
-  ### Implementation
+  ### Implementación
 
-  * You'll have to modify the same files you did in Project 1b in order to add the two new system calls.
-  * In order to understand how processes are created, remember that they start in the `EMBRYO` state before they become `RUNNABLE`--you'll have to find where that happens.
-  * System calls always have argument type `void`, so take a look at how system calls like `kill` and `read` manage to work around that limitation and get arguments (like integers and pointers) from user space. You might have to back a few steps in the chain that executes them.
-  * Make sure you're including `types.h` and `defs.h` wherever you need to access code from other parts of the kernel.
-  * In order to create the xv6 command `ps`, look at how `cat`, `ls`, and `ln` are implemented. Make sure to modify the Makefile to include the source code for your `ps` command.
+  - Tendrás que modificar los mismos archivos que en el Proyecto 1b para agregar las dos nuevas llamadas al sistema.
+  - Para entender cómo se crean los procesos, recuerda que comienzan en el estado `EMBRYO` antes de convertirse en `RUNNABLE`--tendrás que encontrar dónde ocurre eso.
+  - Las llamadas al sistema siempre tienen el tipo de argumento `void`, así que mira cómo las llamadas al sistema como `kill` y `read` logran sortear esa limitación y obtener argumentos (como enteros y punteros) desde el espacio de usuario. Es posible que tengas que retroceder algunos pasos en la cadena que las ejecuta.
+  - Asegúrate de incluir `types.h` y `defs.h` donde sea necesario acceder a código de otras partes del kernel.
+  - Para crear el comando xv6 `ps`, mira cómo están implementados `cat`, `ls` y `ln`. Asegúrate de modificar el Makefile para incluir el código fuente de tu comando `ps`.
 
+## ¡Spoilers a continuación!
 
-## Spoilers below!
+### Guía de la solución
 
-### Solution walk through
+- Comienza con una copia nueva del código fuente de `xv6`.
 
-- Start from a fresh copy of the `xv6` source code.
+- `argint` y `argptr` son funciones importantes. Las llamadas a sistema (`syscall`) no toman argumentos, pero en realidad, en el código de usuario quieres pasar argumentos a ellas.
 
-- `argint` and `argptr` are important functions. So `syscall`s take no arguments, but in reality, in user code you want to pass arguments to them.
+- La forma de hacerlo es que el kernel llamará a la `syscall`, digamos, `sys_kill()` sin argumentos, luego `sys_kill` usará `argint()` para obtener los argumentos de la pila de llamadas, y luego pasará eso a una función `kill(int pid)`.
 
-- So the way you do that is the kernel will call the `syscall`, say, `sys_kill()` with no arguments, then `sys_kill` will use `argint()` to get the arguments from the call stack, then pass that to a function `kill(int pid)`.
+- Así que puedes ver que hay una serie de declaraciones de funciones `extern int sys_whatever` a continuación; eso significa que estas funciones están definidas en otro archivo y deben incluirse desde allí como punteros a funciones.
 
-- So you can see there's a bunch of `extern int sys_whatever` function declarations below that; that means that these functions are defined in another file and should be pulled in from there as function pointers.
+- Y estas funciones `sys_whatever` son básicamente envolturas (wrappers) para la verdadera llamada al sistema, que no tiene el `sys_` al principio. Así que necesitas agregar `sys_settickets` y `sys_getpinfo` a esa lista de declaraciones de funciones.
 
-- And these `sys_whatever` functions are basically just wrappers for the real `syscall`, which doesn't have the `sys_` at the beginning. So you need to add `sys_settickets` and `sys_getpinfo` to that list of function declarations.
+- Luego hay un arreglo de punteros a funciones; está usando esta forma antigua de C para inicializar arreglos donde puedes hacer `int arr[] = { [0] 5, [1] 7}`.
 
-- Then there's an array of function pointers; it's using this old-school C way of initializing arrays where you can do `int arr[] = { [0] 5, [1] 7}`.
+- Y los nombres dentro de los corchetes cuadrados `SYS_fork`, etc. están definidos como macros del preprocesador en otro archivo de encabezado `syscall.h`.
 
-- And the names inside the square brackets `SYS_fork`, etc. are defined as preprocessor macros in another header file `syscall.h`.
+- Así que necesitas agregar dos entradas más en el arreglo con punteros a funciones a `sys_settickets` y `sys_getpinfo`, y luego necesitas definir `SYS_settickets` y `SYS_getpinfo` en el archivo de encabezado relevante.
 
-- So you need to add two more entries in the array with function pointers to `sys_settickets` and `sys_getpinfo`, and then you need to define `SYS_settickets` and `SYS_getpinfo` in the relevant header file.
+- Entonces todas estas funciones `sys_` están definidas en `sysproc.c`.
 
-- So then all these `sys_` wrapper functions are defined in `sysproc.c`.
+- Así que allí, necesitas crear `int sys_settickets(void)` y `int sys_getpinfo(void)`.
 
-- So there, you need to create `int sys_settickets(void)` and `int sys_getpinfo(void)`.
+- La verdadera función `settickets` necesitará un argumento entero, así que necesitas usar `argint` allí para obtenerlo de la pila de llamadas y pasarlo a `settickets`; de manera similar, `getpinfo` necesitará un puntero, así que usarás `argptr`.
 
-- The real `settickets` function will need an int argument, so you need to use `argint` there to grab it from the call stack and pass it to `settickets`; similarly, `getpinfo` will need a pointer, so you'll use `argptr`.
+- Además, hay una condición extra en la sentencia if para `sys_settickets`; eso es porque no se permite usar un número de tickets inferior a 1.
 
-- Also, there's an extra condition in the if statement for `sys_settickets`; that's because you're not allowed to use a number of tickets below 1.
+- Luego hay código de ensamblador que debe ejecutarse para cada una de las llamadas al sistema; afortunadamente, es solo una macro preescrita, así que no tienes que escribir ningún ensamblador. Eso está en `usys.S`.
 
-- So then there's some assembly code that needs to run for each of the system calls; luckily, it's just a pre-written macro, so you don't have to write any assembly. that's in `usys.S`.
+- Así que simplemente agregas dos líneas al final para crear macros para `SYSCALL(settickets)` y `SYSCALL(getpinfo)`
 
-- So you just add two lines at the bottom to create macros for `SYSCALL(settickets)` and `SYSCALL(getpinfo)`
+- La última parte para las `syscalls`: necesitas declararlas en un archivo de encabezado para que el código de usuario pueda llamarlas. Eso está en `user.h`.
 
-- Last part for the `syscalls`: you need to declare them in a header file for user code to be able to call them. that's in `user.h`.
+- Así que `struct pstat` se definirá adecuadamente en `pstat.h`, pero necesitas declararla también en `user.h` para que el código de usuario no se queje cuando la vea.
 
-- So `struct pstat` will be properly defined in `pstat.h`, but you need to declare it in `user.h` as well so that user code doesn't complain when it sees it.
+- Básicamente, cualquier código de usuario que use `syscalls` o funciones de la biblioteca estándar de C (realmente, de `xv6`) tendrá que incluir `user.h`.
 
-- Basically, any user code that uses `syscalls` or C (really, `xv6`) standard library functions will have to include `user.h`.
+- Hasta ahora, eso es todo para las dos llamadas al sistema en lo que respecta al sistema operativo; ahora solo tenemos que implementarlas con las funciones regulares `settickets` y `getpinfo`, luego implementar el planificador y el programa `ps`.
 
-- So, so far, that's everything for the two system calls as far as the OS is concerned; now we just have to actually implement them with the regular functions `settickets` and `getpinfo`, then implement the scheduler and the `ps` program.
+- `pstat.h` no es para el planificador, sino para el programa `ps`, que funcionará algo así como el `ps` de Linux. `pstat.h` solo sirve para definir el `struct pstat`, pero no hay un archivo `.c` que lo acompañe.
 
-- `pstat.h` is not for the scheduler, but for the `ps` program, which will work somewhat like the Linux `ps`. `pstat.h` is just to define the `struct pstat`, but there's no `.c` file to go with it.
+- Entonces el planificador funcionará asignando 1 ticket por defecto a cada proceso cuando se crea; luego los procesos pueden establecer sus propios tickets usando la llamada al sistema `settickets`.
 
-- So the scheduler will work by assigning 1 ticket by default to each process when it's created; then processes can set their own tickets using the `settickets` system call.
+- así que primero necesitamos asegurarnos de que cada proceso lleve un registro de sus propios tickets, luego necesitamos asignar un valor predeterminado de 1 ticket al crearlos, luego necesitamos escribir `settickets`.
 
-- so first we need to make sure each process tracks its own tickets, then we need to assign a default of 1 ticket when creating them, then we need to write `settickets`.
+- la primera parte está en `proc.h`: los procesos se representan como un `struct proc`, así que agregamos un nuevo miembro para `int tickets`.
 
-- the first part is in `proc.h`: processes are represented as a `struct proc`, so we add a new member for `int tickets`.
+- el miembro `int ticks` es para `ps`; volveré a eso más tarde.
 
-- the `int ticks` member is for `ps`; I'll come back to that.
+- Otra cosa a tener en cuenta en `proc.h` es el `enum procstate`: puedes ver todos los posibles estados de proceso allí. `EMBRYO` significa que está en proceso de creación; así que lo que hice fue hacer `grep` de `EMBRYO` para encontrar dónde se creaba el proceso para establecer los tickets predeterminados en 1. Resulta que está en `proc.c`.
 
-- One other thing to note in `proc.h` is the `enum procstate`: you can see all the possible process states there. `EMBRYO` means it's in the process of creation; so what i did was `grep` for `EMBRYO` to find where the process was created in order to set the default tickets to 1. Turns out it's in `proc.c`.
+- Dentro de `proc.c`, hay una función `allocproc`, que inicializa un proceso.
 
-- Inside `proc.c`, there's a function `allocproc`, which initializes a process.
+- Hay una tabla de procesos llamada `ptable`, y `allocproc` la recorre para encontrar un proceso no utilizado.
 
-- There's a process table called `ptable`, and `allocproc` looks through it to find an unused process.
+- Luego, cuando lo encuentra, procede a crearlo; agregué `p->tickets = 1;` allí.
 
-- Then when it does find it, it goes to create it; i added `p->tickets = 1;` there.
+- bien, así que el siguiente cambio es para cumplir con uno de los requisitos: los procesos hijos necesitan heredar el número de tickets de su proceso padre.
 
-- okay so the next change is to fit one of the requirements: child processes need to inherit the number of tickets from their parent process.
+- Así que los procesos hijos se crean con `fork`, que está en el mismo archivo.
 
-- So child processes are created with `fork`, which is in the same file.
+- En `fork`, `curproc` es el proceso actual, y `np` es el nuevo proceso.
 
-- In `fork`, `curproc` is the current process, and `np` is the new process.
+- Así que establecí `np->tickets = curproc->tickets`.
 
-- So i set `np->tickets = curproc->tickets`.
+- Así que el planificador necesita generar un número pseudoaleatorio, luego debe recorrer la tabla de procesos con un contador inicializado en 0, sumando el número de tickets para cada proceso al contador. Una vez que el contador sea mayor que el número pseudoaleatorio, se detiene y ejecuta ese proceso.
 
-- So the scheduler needs to generate a pseudo random number, then it should iterate through the process table with a counter initialized to 0, adding the number of tickets for each process to the counter. once the counter is greater than the pseudo random number, it stops and runs that process.
+- Así que terminé mirando en *The Standard C Library* de P.J. Plauger, que es simplemente un gran libro con todo el código fuente de la biblioteca C con comentarios. Es bastante bueno; no sé si todavía está escrito de esa manera porque el libro es de los 80.
 
-- So I ended up looking in P.J. Plauger's The Standard C Library, which is just a big book of all the source code for the C library with commentary. It's pretty good; I don't know if it's still written that way though because the book is from the 80s.
+- Así que simplemente implementé las funciones `rand` y `srand` de C. `srand` establece una semilla aleatoria (no tan aleatoria, como verás más adelante), luego `rand` la convierte en un entero pseudoaleatorio.
 
-- So i just implemented C's `rand` and `srand` functions. `srand` sets a random seed (not so random, as you'll see later), then `rand` turns it into a pseudo random integer.
+- Hay mucha magia de tipos ocurriendo allí entre cambios de enteros a enteros sin signo; eso es para evitar el desbordamiento de enteros con signo, que causa comportamiento indefinido. El desbordamiento de enteros sin signo está bien.
 
-- There's a bunch of type magic going on there between changes back and forth from integers to unsigned integers; that's to avoid signed integer overflow, which causes undefined behavior. unsigned integer overflow is okay though.
+- Solo hice un cambio para hacerlo más rápido, que fue escribir `& 32767` en lugar de `% 32768`.
 
-- I only made one change to make it faster, which was to write `& 32767` instead of `% 32768`.
+- Así que verás la semilla "aleatoria" que usé: el número de `ticks`, que creo que cuenta el número de interrupciones de temporizador hasta ahora.
 
-- So you'll see the "random" seed i used: the number of `ticks`, which i think counts the number of timer interrupts so far.
+- Lo cual no es aleatorio en absoluto, ya que la primera vez que se ejecuta este programa, será 0, luego 1, luego 2, etc.
 
-- Which is totally not random at all, since the first time this program gets run, it'll be 0, then 1, then 2, etc.
+- Así que hay algunas líneas sobre contar `ticks`; eso era para `ps`, no para el planificador.
 
-- So there's some lines about counting `ticks`; that was for `ps`, not the scheduler.
+- El cambio principal para hacerlo un planificador de lotería es la variable contador.
 
-- The main change to make it a lottery scheduler is the counter variable.
+- Y agregar un bucle for para contar el número total de tickets que se han distribuido.
 
-- And adding a for loop to count the total number of tickets that have been distributed.
+- Así que luego, en la parte inferior de este archivo, está la implementación de `settickets` y `getpinfo`.
 
-- So then at the very bottom of this file is the implementation of `settickets` and `getpinfo`.
+- Así que después de inicializar `counter` y `totaltickets`, hay un bucle for que cuenta el número total de tickets que se han asignado a los procesos.
 
-- So after initializing `counter` and `totaltickets`, there's for loop that counts the total numbers of tickets that have gone out to processes.
+- Luego obtenemos el ticket ganador.
 
-- Then we get the winning ticket.
+- Discutamos primero el código fuente original. Primero adquieres el bloqueo. Lo liberarás al final. Pero entre medias, tienes un bucle for que itera sobre todos los procesos en `ptable`.
 
-- Let's discuss the original source code first. So first you acquire the lock. You'll release it at the very end. But in between, you have a for loop that iterates over all the processes in `ptable`.
+- Específicamente, itera solo sobre los procesos en estado `RUNNABLE`; si un proceso no está `RUNNABLE`, simplemente `continue` al siguiente. (Esto es para el mecanismo de planificación round-robin que ya está en el código.)
 
-- Specifically, it iterates over only the processes in `RUNNABLE` state; if a process isn't `RUNNABLE`, it just `continue`s on to the next one. (This is for the round-robin scheduling mechanism that's already in the code.)
+- Así que ahora va a cambiar al primer proceso `RUNNABLE` que encuentre. Como, cambiando a ejecutarlo.
 
-- So now it's gonna switch to the very first `RUNNABLE` process it finds. Like, switching to executing it.
+- Primero, `c` representa la CPU actual. así que establece la CPU actual para ejecutar el proceso que encontró con `c->proc = p;`.
 
-- So first, `c` represents the current CPU. so it sets the current CPU to run the process it found with `c->proc = p;`.
+- Luego llama a esta función, `switchuvm(p)`, que configura el espacio de direcciones de memoria virtual para `p`. Luego establece el estado del proceso en `RUNNING`.
 
-- Then it calls this function, `switchuvm(p)`, which sets up the virtual memory address space for `p`. Then it sets the process's state to `RUNNING`.
+- Y luego `swtch` es donde ocurre la magia: eso intercambia el contenido de los registros del sistema operativo y el planificador con el contenido de los registros guardados en memoria del proceso `p`.
 
-- And then `swtch` is where the magic happens: that one swaps out the register contents of the OS and scheduler content with the saved-in-memory register contents of the process `p`.
+- Así que tan pronto como se ejecuta `swtch`, la CPU continuará ejecutando instrucciones, pero ahora son las instrucciones del proceso. Así que esta función del planificador simplemente se queda allí.
 
-- So as soon as `swtch` executes, the CPU will continue executing instructions, but now they're the process's instructions. So this scheduler function just hangs there.
+- Eventualmente, cuando se active una interrupción de temporizador, el procesador usará otra llamada `swtch` pero con los argumentos invertidos para intercambiar el contenido de los registros del planificador de la memoria en los registros de la CPU y guardar el contenido de los registros del proceso. En ese momento, la ejecución continuará exactamente en este punto.
 
-- Eventually, when a timer interrupt goes off, the processor will use another `swtch` call but with the arguments reversed to swap the scheduler's register contents from memory into the CPU's registers and save the process's register contents. At which point execution will continue at this exact point.
+- Luego `switchkvm` configurará el espacio de direcciones de memoria virtual del kernel.
 
-- So now `switchkvm` will set up the kernel's virtual memory address space.
-
-- These 5 lines are the context switch:
+- Estas 5 líneas son el cambio de contexto:
 
   ```c
   c->proc = p;
@@ -140,63 +139,63 @@
   switchkvm();
   ```
 
-- So then we go on to the next iteration of the inner for loop, which finds the next `RUNNABLE` process and repeats.
+- Luego continuamos con la siguiente iteración del bucle for interno, que encuentra el siguiente proceso `RUNNABLE` y repite.
 
-- Only once we've executed all the `RUNNABLE` processes do we exit the inner for loop and release the lock.
+- Solo una vez que hayamos ejecutado todos los procesos `RUNNABLE` salimos del bucle for interno y liberamos el bloqueo.
 
-- Original source code is structured like this (this is pseudocode):
-
-  ```python
-  while (1) {
-    iterate over processes:
-      if not runnable:
-        continue
-      run it
-  ```
-
-- New code is structured like this (this is pseudocode):
+- El código fuente original está estructurado así (esto es pseudocódigo):
 
   ```python
   while (1) {
-    count the total tickets allotted to all processes // one for loop here
-    get the winning ticket number
-    iterate over processes: // another for loop here
-      if not runnable:
-        continue
-      add its tickets to counter
-      if counter <= winning ticket number:
-        continue
-      run it
+    recorrer procesos:
+      si no ejecutable (runnable):
+        continuar
+      ejecutarlo
   ```
 
-- We ignore the tickets of non-RUNNABLE processes.
+- El nuevo código está estructurado así (esto es pseudocódigo):
 
-- So the tickets aren't numbered; each process just has a set amount of tickets, and we just count up until we've passed `n` tickets, where `n` is the winner.
+  ```python
+  while (1) {
+    contar los tickets totales asignados a todos los procesos // un bucle for aquí
+    obtener el número del ticket ganador
+    recorrer procesos: // otro bucle for aquí
+      si no ejecutable (runnable):
+        continuar
+      agregar sus tickets al contador
+      si contador <= número del ticket ganador:
+        continuar
+      ejecutarlo
+  ```
 
-- For example if proc A has 5 tickets and proc B has 7, proc C has 2. if the winning number is 3, then A would run; if it's 8, then B would run; if it's 12, then C would run.
+- Ignoramos los tickets de los procesos no ejecutables (non-RUNNABLE).
 
-- A winner in 0-4 would be A, 5-11 would be B, and 12-13 would be C.
+- Los tickets no están numerados; cada proceso simplemente tiene una cantidad fija de tickets, y solo contamos hasta que hayamos superado `n` tickets, donde `n` es el ganador.
 
-- So `settickets` is pretty basic: you just acquire a lock, set the tickets for the process, release the lock.
+- Por ejemplo, si el proceso A tiene 5 tickets y el proceso B tiene 7, el proceso C tiene 2. Si el número ganador es 3, entonces A se ejecutaría; si es 8, entonces B se ejecutaría; si es 12, entonces C se ejecutaría.
 
-- For `getpinfo` basically it works like this:
+- Un ganador en 0-4 sería A, 5-11 sería B, y 12-13 sería C.
 
-- `p` is a pointer a `struct pstat`, as defined in `pstat.h`. each of its members is an array, with one entry per process.
+- Así que `settickets` es bastante básico: simplemente adquieres un bloqueo, estableces los tickets para el proceso, liberas el bloqueo.
 
-- Check for a null pointer.
+- Para `getpinfo` básicamente funciona así:
 
-- Iterate over the process table and set `proc_i` to the i-th process.
+- `p` es un puntero a `struct pstat`, como se define en `pstat.h`. Cada uno de sus miembros es un arreglo, con una entrada por proceso.
 
-- Set the i-th entry of each member of `p` to the value for this process.
+- Verifica si es un puntero nulo.
 
-- One last bookkeeping piece: we need to add declarations for `struct pstat` and the `settickets` and `getpinfo` system calls in `defs.h`.
+- Recorre la tabla de procesos y establece `proc_i` como el i-ésimo proceso.
 
-- And then the last file is `ps.c`, which implements the `ps` program, similar to Linux's `ps`. it just calls `getpinfo` to fill a `struct pstat`, then prints out the info for each process in use.
+- Establece la i-ésima entrada de cada miembro de `p` al valor para este proceso.
 
-- And then you just modify the Makefile to include `ps.c` in the compilation, and we're done!
+- Un último detalle administrativo: necesitamos agregar declaraciones para `struct pstat` y las llamadas al sistema `settickets` y `getpinfo` en `defs.h`.
 
-- Oh and this is why we needed the ticks in the scheduler: `ps` will print out how long each process has run.
+- Y luego el último archivo es `ps.c`, que implementa el programa `ps`, similar al `ps` de Linux. Simplemente llama a `getpinfo` para llenar un `struct pstat`, luego imprime la información para cada proceso en uso.
 
-- So it needs to time the number of ticks that it actually executed.
+- Y luego solo modificas el Makefile para incluir `ps.c` en la compilación, ¡y listo!
 
-- FINALLY run `make qemu` in the `/src` directory to make sure it's all working.
+- Ah, y esto es por qué necesitábamos los ticks en el planificador: `ps` imprimirá cuánto tiempo ha ejecutado cada proceso.
+
+- Así que necesita medir el número de ticks que realmente ejecutó.
+
+- FINALMENTE ejecuta `make qemu` en el directorio `/src` para asegurarte de que todo funcione.

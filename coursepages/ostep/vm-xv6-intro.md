@@ -1,13 +1,13 @@
-Credit goes to [palladian](https://github.com/palladian1)
+## Créditos para [palladian](https://github.com/palladian1)
 
-## Intro To xv6 Virtual Memory
+## Introducción a la Memoria Virtual de xv6
 
-### WARNING:
+### ADVERTENCIA:
 
-***The project doesn't match the currently available xv6 source code, which already has this project implemented in it!***
+***¡El proyecto no coincide con el código fuente de xv6 disponible actualmente, que ya tiene este proyecto implementado!***
 
-[palladian](https://github.com/palladian1) tracked down a different xv6 source from the Github page of a U of Wisconsin student. We had to edit the `Makefile` to find the QEMU executable correctly. We added `null.c` to the `user` folder (also edited `makefile.mk` there), which demonstrates the lack of memory safety.
+[palladian](https://github.com/palladian1) encontró un código fuente xv6 diferente en la página de GitHub de un estudiante de la Universidad de Wisconsin. Tuvo que editar el `Makefile` para encontrar correctamente el ejecutable de QEMU. Agregó `null.c` a la carpeta `user` (también editó `makefile.mk` allí), lo cual demuestra la falta de seguridad en la memoria.
 
-Start with the code in [`start.zip`](https://github.com/spamegg1/reviews/raw/master/courses/OSTEP/ostep-projects/vm-xv6-intro/start.zip). Extract it and run `make clean` and `make qemu-nox`. Then inside the xv6 system run `null` to see the lack of safety! If you want to compare the results of `null` with the actual machine code, you can run `objdump -d user/null.o`.
+Comienza con el código en [`start.zip`](https://github.com/spamegg1/reviews/raw/master/courses/OSTEP/ostep-projects/vm-xv6-intro/start.zip). Extráelo y ejecuta `make clean` y `make qemu-nox`. Luego, dentro del sistema xv6 ejecuta `null` para ver la falta de seguridad. Si deseas comparar los resultados de `null` con el código de máquina real, puedes ejecutar `objdump -d user/null.o`.
 
-You might have to manually run `make clean` and `make qemu-nox` every time you make a change to the code.
+Es posible que tengas que ejecutar manualmente `make clean` y `make qemu-nox` cada vez que realices un cambio en el código.
