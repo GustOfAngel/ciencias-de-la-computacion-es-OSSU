@@ -1,44 +1,44 @@
-# Introduction to Computer Science and Programming using Python
+# Introducción a las Ciencias de la Computación y Programación usando Python
 
-This course will introduce you to the world of computer science and programming, giving you a flavor of the material to come. If you finish the course wanting more, Computer Science is likely for you!
+Este curso te introducirá al mundo de las ciencias de la computación y la programación, dándote una muestra del material por venir. ¡Si terminas el curso deseando más, es probable que las Ciencias de la Computación sean para ti!
 
-This course has been developed by MIT and is available on [MIT's OCW](https://ocw.mit.edu) platform.
+Este curso ha sido desarrollado por el MIT y está disponible en la [plataforma OCW del MIT](https://ocw.mit.edu).
 
-> Introduction to Computer Science and Programming in Python is intended for students with little or no programming experience. It aims to provide students with an understanding of the role computation can play in solving problems and to help students, regardless of their major, feel justifiably confident of their ability to write small programs that allow them to accomplish useful goals. The class uses the Python programming language.
+> Introducción a las Ciencias de la Computación y Programación en Python está dirigido a estudiantes con poca o ninguna experiencia en programación. Tiene como objetivo proporcionar a los estudiantes una comprensión del papel que puede desempeñar la computación en la resolución de problemas y ayudar a los estudiantes, independientemente de su especialidad, a sentirse justificadamente seguros de su capacidad para escribir pequeños programas que les permitan lograr objetivos útiles. La clase utiliza el lenguaje de programación Python.
 
-**Course Link:** <https://ocw.mit.edu/courses/6-100l-introduction-to-cs-and-programming-using-python-fall-2022/pages/material-by-lecture/>
+**Enlace del curso:** <https://ocw.mit.edu/courses/6-100l-introduction-to-cs-and-programming-using-python-fall-2022/pages/material-by-lecture/>
 
-## ⚠️ Under Review
+## ⚠️ En Revisión
 
-This course is under review. The course has been designed to accommodate people completely new to programming. However, if you find the course difficult to follow, you can try doing one of the [Intro to Programming courses](../intro-programming/README.md) and then return to this course. We would like to hear your feedback regarding this course, and whether you needed to do the [Intro to Programming courses](../intro-programming/README.md) first. Please provide your feedback on this RFC: <https://github.com/ossu/computer-science/issues/1266>.
+Este curso se encuentra en revisión. El curso ha sido diseñado para personas completamente nuevas en programación. Sin embargo, si encuentras difícil seguir el curso, puedes intentar realizar uno de los [cursos de Introducción a la Programación](../intro-programming/README.md) y luego regresar a este curso. Nos gustaría conocer tu opinión sobre este curso y si necesitaste realizar primero los [cursos de Introducción a la Programación](../intro-programming/README.md). Por favor, comparte tus comentarios en este RFC: <https://github.com/ossu/computer-science/issues/1266>.
 
-## Instructions
+## Instrucciones
 
-1. Open the [course link](https://ocw.mit.edu/courses/6-100l-introduction-to-cs-and-programming-using-python-fall-2022/pages/material-by-lecture/) given above. You will see a list of Lectures.
-2. Clicking on the link of a particular lecture will present all the materials from that lecture to you.
-3. Work through all the course lectures as given in the link above. Watch the videos, do the finger exercises, and then solve the problem sets.
-4. You are not supposed to complete the problem sets as soon as they appear on a lecture page. You are supposed to start thinking about it from that point. The actual due dates, according to the [course calendar](https://ocw.mit.edu/courses/6-100l-introduction-to-cs-and-programming-using-python-fall-2022/pages/calendar/) are:
+1. Abre el [enlace del curso](https://ocw.mit.edu/courses/6-100l-introduction-to-cs-and-programming-using-python-fall-2022/pages/material-by-lecture/) proporcionado anteriormente. Verás una lista de conferencias.
+2. Al hacer clic en el enlace de una conferencia específica, se te presentarán todos los materiales de dicha conferencia.
+3. Trabaja todas las conferencias del curso según se indican en el enlace anterior. Mira los videos, realiza los ejercicios prácticos ("finger exercises"), y luego resuelve los conjuntos de problemas ("problem sets").
+4. No se espera que completes los conjuntos de problemas tan pronto como aparezcan en una página de conferencia. Se espera que comiences a pensar en ellos desde ese momento. Las fechas de entrega reales, según el [calendario del curso](https://ocw.mit.edu/courses/6-100l-introduction-to-cs-and-programming-using-python-fall-2022/pages/calendar/), son:
 
-   - PSET 0 - Before lecture 1
-   - PSET 1 - Before lecture 9
-   - PSET 2 - Before lecture 12
-   - PSET 3 - Before lecture 16
-   - PSET 4 - Before lecture 20
-   - PSET 5 - Before lecture 25
+   - PSET 0 - Antes de la conferencia 1
+   - PSET 1 - Antes de la conferencia 9
+   - PSET 2 - Antes de la conferencia 12
+   - PSET 3 - Antes de la conferencia 16
+   - PSET 4 - Antes de la conferencia 20
+   - PSET 5 - Antes de la conferencia 25
 
-6. There are links to solution of finger exercises on each lecture page. Match your answers to the given solutions to grade yourself.
-7. Each problem set come with a script and instructions to check your solution. Use them to grade yourself.
-8. You don't need to install the full Anaconda distribution to do this course. See the notes section below for more information.
-9. If you are stuck somewhere, feel free to ask questions. You can join the OSSU chat for this course here: <https://discord.gg/jvchSm9>.
+5. Hay enlaces a soluciones de los ejercicios prácticos en cada página de conferencia. Compara tus respuestas con las soluciones proporcionadas para autoevaluarte.
+6. Cada conjunto de problemas incluye un script e instrucciones para verificar tu solución. Úsalos para autoevaluarte.
+7. No necesitas instalar la distribución completa de Anaconda para realizar este curso. Consulta la sección de notas para más información.
+8. Si te quedas atascado en algún punto, no dudes en hacer preguntas. Puedes unirte al chat de OSSU para este curso aquí: <https://discord.gg/jvchSm9>.
 
-## Notes
+## Notas
 
-1. You don't need to install the full anaconda package to do this course. You can just download the Spyder IDE from here: <https://github.com/spyder-ide/spyder/releases/latest>. It comes bundles with python as well as some popular scientific python libraries (all the libraries which this course uses are included), but it is not as large or complex as the full anaconda distribution. You don't need to set up python separately or anything.
-2. You can use VS Code, or any text editor/IDE you prefer. If you are using a text editor/IDE other than Spyder/Anaconda, you should note that the course sometimes ask you to run some additional statements after running a python file. To do so, run `python -i file.py`. Then you can run additional statements. 
-3. You won't get any certificate for doing this course. If you really want a certificate, you need to do the faster instructor-paced [6.00.1x course on Edx](https://www.edx.org/course/introduction-to-computer-science-and-programming-7) on Edx. Certificate of an introductory course like this is not very valuable, so unless you are absolutely sure, we recommend you to do the 6.100L course linked above instead.
-4. If for some reason you want to do the OCW version of the faster paced 6.0001 course, you can do that here: <https://ocw.mit.edu/courses/6-0001-introduction-to-computer-science-and-programming-in-python-fall-2016/>.
-5. The course mentions the textbook [Introduction to Computation and Programming Using Python, third edition](https://mitpress.mit.edu/9780262542364/introduction-to-computation-and-programming-using-python/) as required reading. As with any course listed on OSSU, please remember: All paid additions should be considered optional. You will not fail this course if you do not read the textbook. "The book and the course lectures parallel each other, though there is more detail in the book about some topics." You are not missing out on enough for it to matter.
+1. No necesitas instalar el paquete completo de Anaconda para realizar este curso. Puedes descargar simplemente el IDE Spyder desde aquí: <https://github.com/spyder-ide/spyder/releases/latest>. Viene con Python y algunas bibliotecas científicas populares de Python (todas las bibliotecas que utiliza este curso están incluidas), pero no es tan grande ni complejo como la distribución completa de Anaconda. No necesitas configurar Python por separado ni nada adicional.
+2. Puedes usar VS Code o cualquier editor de texto/IDE que prefieras. Si estás usando un editor de texto/IDE diferente a Spyder/Anaconda, debes tener en cuenta que el curso a veces te pide ejecutar algunas declaraciones adicionales después de ejecutar un archivo de Python. Para hacerlo, ejecuta `python -i file.py`. Luego puedes ejecutar declaraciones adicionales.
+3. No obtendrás ningún certificado por realizar este curso. Si realmente deseas un certificado, necesitas realizar el curso más rápido con instructor en [6.00.1x en Edx](https://www.edx.org/course/introduction-to-computer-science-and-programming-7). Un certificado de un curso introductorio como este no tiene mucho valor, por lo que a menos que estés absolutamente seguro, te recomendamos realizar el curso 6.100L enlazado anteriormente.
+4. Si por alguna razón deseas realizar la versión OCW del curso 6.0001 de mayor velocidad, puedes hacerlo aquí: <https://ocw.mit.edu/courses/6-0001-introduction-to-computer-science-and-programming-in-python-fall-2016/>.
+5. El curso menciona el libro de texto [Introduction to Computation and Programming Using Python, tercera edición](https://mitpress.mit.edu/9780262542364/introduction-to-computation-and-programming-using-python/) como lectura obligatoria. Como con cualquier curso listado en OSSU, recuerda: todos los materiales de pago deben considerarse opcionales. No reprobarás este curso si no lees el libro de texto. "El libro y las conferencias del curso son paralelos, aunque el libro ofrece más detalles sobre algunos temas." No te perderás suficiente información como para que esto sea relevante.
 
-## Extra Practice
+## Práctica Adicional
 
 1. [https://introcomp.mit.edu/spring25/practice](https://introcomp.mit.edu/spring25/practice)
