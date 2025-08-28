@@ -1,103 +1,103 @@
-# Systematic Program Design
+# Diseño Sistemático de Programas
 
-This course has been developed by UBC and is available from Edx. We recommend you to do it from the archived version on Edx.
+Este curso ha sido desarrollado por la Universidad de Columbia Británica (UBC) y está disponible en Edx. Recomendamos realizarlo desde la versión archivada en Edx.
 
-> This programming course takes a unique approach, as it focuses on learning a systematic programming method rather than a programming language. This practical approach will help you channel your creativity so that you can program well in any language.
+> Este curso de programación tiene un enfoque único, ya que se centra en aprender un método sistemático de programación en lugar de un lenguaje de programación específico. Este enfoque práctico te ayudará a canalizar tu creatividad para que puedas programar bien en cualquier lenguaje.
 
-**Course Link (Recommended):** <https://learning.edx.org/course/course-v1:UBCx+SPD1x+2T2015>
+**Enlace del curso (Recomendado):** <https://learning.edx.org/course/course-v1:UBCx+SPD1x+2T2015>
 
-Alternative Links:
+Enlaces alternativos:
 
-- <https://www.edx.org/learn/coding/university-of-british-columbia-how-to-code-simple-data> (Up to Week 6A)
-- <https://www.edx.org/learn/coding/university-of-british-columbia-how-to-code-complex-data> (Week 6B onwards)
+- <https://www.edx.org/learn/coding/university-of-british-columbia-how-to-code-simple-data> (Hasta la Semana 6A)
+- <https://www.edx.org/learn/coding/university-of-british-columbia-how-to-code-complex-data> (Desde la Semana 6B en adelante)
 
-## Instructions
+## Instrucciones
 
-**Note:** These instructions are for the archived version of the course on Edx, which we recommend. They don't apply to other versions of the course.
+**Nota:** Estas instrucciones son para la versión archivada del curso en Edx, que recomendamos. No aplican a otras versiones del curso.
 
-- The course does not have a homepage on Edx, but don't worry about it. Open the [link](https://learning.edx.org/course/course-v1:UBCx+SPD1x+2T2015) given above, log in (if you are not logged in) and then enroll in the course.
-- Work through Week 1A to Week 6A as given in the course overview. Watch the videos, do the exercises, and then solve the problems from the problem bank.
-- After you complete, Week 6A, do the [space invaders problem](https://github.com/ossu/spd-starters/blob/main/final/space-invaders-starter.rkt). You can find further instructions here: [Space Invaders Instructions](space-invaders-instructions.png). You can watch a sample run of the game [here](https://www.youtube.com/shorts/wUg3psZl7vM).
-- Then, work through Week 6B onwards. Watch the videos, do the exercises, and then solve the problems from the problem bank.
-- After that, watch the extra videos in [this playlist](https://www.youtube.com/playlist?list=PL6NenTZG6KrqdcyTwGf09uBxjI5pbXuT7).
-- After you complete all the modules in the course, do the [TA solver problem](https://github.com/ossu/spd-starters/blob/main/final/ta-solver-starter.rkt). You will find the instructions in the starter file.
-- The problem bank tab has many additional problems. We suggest you to solve all of them to boost your understanding.
-- Some links to starter files in the course are no longer working. You can download the starter files from this github repository: <https://github.com/ossu/spd-starters>. You can download a zip file of all the starter files using [this link](https://github.com/ossu/spd-starters/archive/refs/heads/main.zip).
-- You won't be able to submit your responses for the exercises, but you can see their answers by clicking on "Show Answer". Check your answers honestly.
-- You won't be able to submit the problem bank problems, but they provide sample solutions. You can match your solution with it.
-- While there are ways to do this course in other IDEs, we suggest you to use Dr. Racket, as configuring the problem starter files for other IDEs is not worth the effort. 
-- If you are stuck somewhere, feel free to ask questions. You can join the OSSU chat for this course here:
-  - Chat for discussions up to Week 6A: <https://discord.gg/RfqAmGJ>
-  - Chat for discussions from Week 6B onwards: <https://discord.gg/kczJzpm>
+- El curso no tiene una página de inicio en Edx, pero no te preocupes por eso. Abre el [enlace](https://learning.edx.org/course/course-v1:UBCx+SPD1x+2T2015) proporcionado anteriormente, inicia sesión (si no has iniciado sesión) y luego inscríbete en el curso.
+- Trabaja desde la Semana 1A hasta la Semana 6A según se indica en la descripción general del curso. Mira los videos, realiza los ejercicios y luego resuelve los problemas del banco de problemas.
+- Después de completar la Semana 6A, realiza el [problema de Space Invaders](https://github.com/ossu/spd-starters/blob/main/final/space-invaders-starter.rkt). Puedes encontrar instrucciones adicionales aquí: [Instrucciones de Space Invaders](space-invaders-instructions.png). Puedes ver una ejecución de muestra del juego [aquí](https://www.youtube.com/shorts/wUg3psZl7vM).
+- Luego, trabaja desde la Semana 6B en adelante. Mira los videos, realiza los ejercicios y luego resuelve los problemas del banco de problemas.
+- Después de eso, mira los videos adicionales en [esta lista de reproducción](https://www.youtube.com/playlist?list=PL6NenTZG6KrqdcyTwGf09uBxjI5pbXuT7).
+- Después de completar todos los módulos del curso, realiza el [problema del solucionador de asistentes](https://github.com/ossu/spd-starters/blob/main/final/ta-solver-starter.rkt). Encontrarás las instrucciones en el archivo inicial.
+- La pestaña del banco de problemas tiene muchos problemas adicionales. Te sugerimos resolver todos para reforzar tu comprensión.
+- Algunos enlaces a archivos iniciales del curso ya no funcionan. Puedes descargar los archivos iniciales desde este repositorio de GitHub: <https://github.com/ossu/spd-starters>. Puedes descargar un archivo zip con todos los archivos iniciales usando [este enlace](https://github.com/ossu/spd-starters/archive/refs/heads/main.zip).
+- No podrás enviar tus respuestas para los ejercicios, pero puedes ver sus soluciones haciendo clic en "Mostrar respuesta". Verifica tus respuestas honestamente.
+- No podrás enviar los problemas del banco de problemas, pero proporcionan soluciones de muestra. Puedes comparar tu solución con ellas.
+- Aunque existen formas de realizar este curso en otros IDE, te sugerimos usar Dr. Racket, ya que configurar los archivos iniciales para otros IDE no vale el esfuerzo. 
+- Si te quedas atascado en algún lugar, no dudes en hacer preguntas. Puedes unirte al chat de OSSU para este curso aquí:
+  - Chat para discusiones hasta la Semana 6A: <https://discord.gg/RfqAmGJ>
+  - Chat para discusiones desde la Semana 6B en adelante: <https://discord.gg/kczJzpm>
 
-## Notes
+## Notas
 
-- Dr. Racket defaults to using the newer notation `#true #false '()`. You can configure Dr. Racket to use the notation used by the course by clicking in menu bar on Language > Choose Language. Then choose the required language (BSL, ISL or other variants). Then click on "Show details" in the bottom left of the window. Then choose `true false empty` in "Constant Style" field. Run your file again to make sure it uses the new configuration.
+- Dr. Racket usa por defecto la notación más reciente `#true #false '()`. Puedes configurar Dr. Racket para usar la notación utilizada por el curso haciendo clic en la barra de menú en Lenguaje > Elegir lenguaje. Luego elige el lenguaje requerido (BSL, ISL u otras variantes). Después haz clic en "Mostrar detalles" en la parte inferior izquierda de la ventana. Luego elige `true false empty` en el campo "Estilo de constantes". Ejecuta tu archivo nuevamente para asegurarte de que usa la nueva configuración.
 
-<img src="change-dr-racket-notation.png" width="600" alt="The language choosing dialog of Dr. Racket" />
+<img src="change-dr-racket-notation.png" width="600" alt="El diálogo de elección de lenguaje de Dr. Racket" />
 
-- You can enable automatic closing of parentheses, brackets, and quotes. Click on Edit in the Menu Bar > Preferences > Go to Editing Tab > Go to General Editing Sub-tab > Check the "Enable automatic parentheses, square brackets, and quotes" checkbox.
+- Puedes habilitar el cierre automático de paréntesis, corchetes y comillas. Haz clic en Editar en la Barra de Menú > Preferencias > Ve a la pestaña Edición > Ve a la subpestaña Edición General > Marca la casilla "Habilitar paréntesis, corchetes y comillas automáticos".
 
-<img src="automatic-parentheses.png" width="600" alt="Enable automatic closing of parentheses" />
+<img src="automatic-parentheses.png" width="600" alt="Habilitar cierre automático de paréntesis" />
 
-- You can use Ctrl + I to reindent the whole file.
+- Puedes usar Ctrl + I para reindentar todo el archivo.
 
-- If you are on Windows or Linux, use Alt + Backspace to delete whole words.
+- Si estás en Windows o Linux, usa Alt + Retroceso para eliminar palabras completas.
 
-- If you are unable to watch the videos on Edx for some reason, you can watch them on [this youtube channel](https://www.youtube.com/@systematicprogramdesign7962/playlists).
+- Si no puedes ver los videos en Edx por alguna razón, puedes verlos en [este canal de YouTube](https://www.youtube.com/@systematicprogramdesign7962/playlists).
 
-## FAQ
+## Preguntas Frecuentes
 
-### This course is boring. Can I skip it?
+### Este curso es aburrido. ¿Puedo saltármelo?
 
-**No.** This course may seem boring at first, but we suggest working though it. This is a great course, and it will probably change the way you think. Many students who found this course boring at first became a fan of the course by the time they completed it. Be very careful. The early parts (especially the rules about how evaluation works) plays a huge role in understanding how code works and gets executed for the rest of the course.
+**No.** Este curso puede parecer aburrido al principio, pero te sugerimos trabajar a través de él. Este es un gran curso y probablemente cambiará la forma en que piensas. Muchos estudiantes que encontraron este curso aburrido al principio se convirtieron en fanáticos del curso para cuando lo completaron. Ten mucho cuidado. Las primeras partes (especialmente las reglas sobre cómo funciona la evaluación) juegan un papel fundamental en la comprensión de cómo funciona y se ejecuta el código para el resto del curso.
 
-### Why is this course taught using BSL? Would it not make more sense to teach it in an industry standard language?
+### ¿Por qué se enseña este curso usando BSL? ¿No tendría más sentido enseñarlo en un lenguaje estándar de la industria?
 
-This is an intentional choice, and here's why:
+Esta es una elección intencional, y estas son las razones:
 
-1. Lisp is the lingua franca of computer scientists -- by which we mean, PhD algorithm researchers. There are some good and some merely historical reasons for this, but it's a fact of life, so if you want to read white papers you're going to want to read Lisp. BSL is a good introduction, and frankly once you get over the parenthesis hell and once you know any Lisp you know how to read them all.
+1. Lisp es la lengua franca de los científicos informáticos -- es decir, investigadores de algoritmos con doctorado. Hay algunas razones buenas y otras meramente históricas para esto, pero es una realidad, por lo que si quieres leer artículos técnicos, vas a querer leer Lisp. BSL es una buena introducción, y francamente, una vez que superes el "infierno de paréntesis" y una vez que conozcas cualquier Lisp, sabrás cómo leerlos todos.
 
-2. This is the first computer science course in most people's curricula that isn't centered around teaching you how to use a language. Because the point of computer science isn't to teach you a language. Or to teach you to code. Or to teach you to be a fullstack software engineer. Computer Science is a very narrowly-applied applied math with wide-ranging practical usage.  But if you strip away all the qualifying language, it's math. Which means it has certain overarching rules that are completely, totally independent of your implementation language.
+2. Este es el primer curso de ciencias de la computación en el currículo de la mayoría de las personas que no se centra en enseñarte cómo usar un lenguaje. Porque el punto de las ciencias de la computación no es enseñarte un lenguaje. Ni enseñarte a codificar. Ni enseñarte a ser un ingeniero de software fullstack. Las Ciencias de la Computación son una matemática aplicada muy estrecha con usos prácticos de amplio alcance. Pero si quitas todo el lenguaje calificativo, son matemáticas. Lo que significa que tiene ciertas reglas generales que son completamente independientes de tu lenguaje de implementación.
 
-This course is built in a throwaway student language, specifically so you don't focus on the language and instead focus on what you're doing with the language. We don't care about public static void main or PEP8 style. We want to see ways to structure a program in any language. So we focus not on the things that make Java unique, and not on the things that make Python unique, and instead focus on the things that make code better.
+Este curso está construido en un lenguaje estudiantil descartable, específicamente para que no te enfoques en el lenguaje y en su lugar te enfoques en lo que estás haciendo con el lenguaje. No nos importa public static void main ni el estilo PEP8. Queremos ver formas de estructurar un programa en cualquier lenguaje. Así que nos enfocamos no en las cosas que hacen único a Java, y no en las cosas que hacen único a Python, y en su lugar nos enfocamos en las cosas que hacen que el código sea mejor.
 
-It might seem rough to learn a new language just to take this course, but BSL frees you from having to worry about style linting or runtime issues or code compartmentalization or compiling or coding environment. It's a gift. Take it. The design patterns are hard enough.
+Puede parecer difícil aprender un nuevo lenguaje solo para tomar este curso, pero BSL te libera de tener que preocuparte por el linting de estilo o problemas de tiempo de ejecución o compartimentalización de código o compilación o entorno de codificación. Es un regalo. Aceptalo. Los patrones de diseño son lo suficientemente difíciles.
 
-### Why there are different course versions, HTC, SPD? Why do you recommend the archived version?
+### ¿Por qué hay diferentes versiones del curso, HTC, SPD? ¿Por qué recomiendan la versión archivada?
 
-There are two reasons people do these courses:
+Hay dos razones por las que las personas realizan estos cursos:
 
-- The Knowledge
-- The Certificate
+- El Conocimiento
+- El Certificado
 
-OSSU assumes you're in it for the knowledge. You can have that for free. If you're doing it for the knowledge you don't need to submit your homework. You just need to do the homework.
+OSSU asume que estás en ello por el conocimiento. Puedes tener eso gratis. Si estás en ello por el conocimiento, no necesitas enviar tus tareas. Solo necesitas hacer las tareas.
 
-If you want the recognition that you've done the thing, then you're in it for the certificate. You can't have the certificate for free. You have to pay for that.
+Si quieres el reconocimiento de que has hecho la cosa, entonces estás en ello por el certificado. No puedes tener el certificado gratis. Tienes que pagar por eso.
 
-There's no reason for you to submit homework sets unless you're doing it for the certificate -- If you're doing that, you can't actually get a certificate from the SPD course (because the course is expired) so you're in the wrong place.
+No hay razón para que envíes conjuntos de tareas a menos que lo hagas por el certificado -- Si estás haciendo eso, en realidad no puedes obtener un certificado del curso SPD (porque el curso está vencido) así que estás en el lugar equivocado.
 
-If you want a certificate, then you need to take How To Code and you need to pay for it.
+Si quieres un certificado, entonces necesitas tomar How To Code y necesitas pagar por ello.
 
-But you don't need to pay for anything in OSSU. We suggest you take SPD because the access to the information is better (because the course is expired) and it's more than sufficient for obtaining the knowledge.
+Pero no necesitas pagar nada en OSSU. Te sugerimos que tomes SPD porque el acceso a la información es mejor (porque el curso está vencido) y es más que suficiente para obtener el conocimiento.
 
 TL;DR:
 
-    If you're in it for the knowledge, take SPD -- it's free but inactive
-    If you're in it for the certificate, take and pay for How To Code -- it's still an active course
+    Si estás en ello por el conocimiento, toma SPD -- es gratuito pero inactivo
+    Si estás en ello por el certificado, toma y paga por How To Code -- todavía es un curso activo
 
-### Can I do this course in another programming language?
+### ¿Puedo hacer este curso en otro lenguaje de programación?
 
-This course has really integrated with the programming languages it uses. We suggest you to use the language specified by the course. While, the concepts you learn from this course are applicable anywhere, trying to do the course with another language is not really sensible, and would just lead to wastage of time.
+Este curso está realmente integrado con los lenguajes de programación que utiliza. Te sugerimos usar el lenguaje especificado por el curso. Aunque los conceptos que aprendas de este curso son aplicables en cualquier lugar, intentar hacer el curso con otro lenguaje no es realmente sensato y solo llevaría a un desperdicio de tiempo.
 
-### Can I use another IDE? I don't like Dr. Racket.
+### ¿Puedo usar otro IDE? No me gusta Dr. Racket
 
-The programs in this course embed pictures and rich-text blocks in the code, which means, the files cannot be opened by other IDEs. While it is possible to prepare the starter files for use with other IDEs, you need Dr. Racket for that, and the time needed to do that can be better utilized in learning the concepts taught by the course.
+Los programas en este curso incrustan imágenes y bloques de texto enriquecido en el código, lo que significa que los archivos no pueden ser abiertos por otros IDE. Aunque es posible preparar los archivos iniciales para su uso con otros IDE, necesitas Dr. Racket para eso, y el tiempo necesario para hacerlo puede ser mejor utilizado en aprender los conceptos enseñados por el curso.
 
-### How do I test functions which are supposed to output random values?
+### ¿Cómo pruebo funciones que se supone que producen valores aleatorios?
 
-You can use `check-random` to test those functions. You can [learn more about it here](https://docs.racket-lang.org/htdp-langs/beginner-abbr.html#(form._((lib._lang%2Fhtdp-beginner-abbr..rkt)._check-random))). It is needed for the Space Invaders project.
+Puedes usar `check-random` para probar esas funciones. Puedes [obtener más información aquí](https://docs.racket-lang.org/htdp-langs/beginner-abbr.html#(form._((lib._lang%2Fhtdp-beginner-abbr..rkt)._check-random))). Es necesario para el proyecto Space Invaders.
 
-## Credits
+## Créditos
 
-The problem starter files and the space invaders instructions were taken from the course ["Systematic Program Design" on Edx](https://learning.edx.org/course/course-v1:UBCx+SPD1x+2T2015), licensed under [CC BY-NC-SA](https://creativecommons.org/licenses/by-nc-sa/4.0/) license.
+Los archivos iniciales de problemas y las instrucciones de Space Invaders fueron tomados del curso "Diseño Sistemático de Programas" en Edx, licenciado bajo licencia [CC BY-NC-SA](https://creativecommons.org/licenses/by-nc-sa/4.0/).
