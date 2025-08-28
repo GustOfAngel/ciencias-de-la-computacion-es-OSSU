@@ -1,19 +1,31 @@
-# Changing the curriculum
-OSSU thrives because of the changes made by our many contributors. Read on for details on how to help every student that follows you.
-## Non-substantive changes
-If you have non-substantive updates to make to the curriculum, such as a course's URL having been moved, spelling/syntax errors, etc., please send a [pull request](https://www.freecodecamp.org/news/how-to-make-your-first-pull-request-on-github-3/) to fix any mistakes that you have found.
-## Substantive changes
-If you have specific and substantive criticisms of the curriculum, i.e. problems related to the progression/content of courses it would be appropriate to [open an issue](https://help.github.com/articles/creating-an-issue/). While it is acceptable to point out problems, all successful changes naturally require a plan for fixing the problem.
-OSSU’s curricular guidelines are [here](CURRICULAR_GUIDELINES.md). Successful critiques of the curriculum will point out ways that OSSU is failing to uphold these guidelines. Examples are:
+# Cambios en el currículo
 
-* OSSU lists a course as required when the course topics are elective in the curricular guide.
-* OSSU not having a course to cover required topics from the curricular guide.
-* OSSU lists multiple courses that cover the same topics when fewer courses could suffice.
-* OSSU recommends a course to teach a topic, but there exists a higher quality course that covers the same material.
-## Other ways to contribute
-### Responding to Issues
-Issues require more than just users to suggest them. Issues require active community members to read and respond to proposals. Even adding simple [emoji reactions](https://github.blog/2016-03-10-add-reactions-to-pull-requests-issues-and-comments/) can help the community.
-### Engaging with other students
-Learning is enhanced by engaged peers. You can be that peer for someone new to OSSU. When you see a new person posting in Discord, ask them a question about themselves. When you see a cohort starting at _almost_ the right time, join in. Doing so will make OSSU a stronger program for everyone, including you.
-# Personal Customization
-If you want to customize the curriculum for yourself, you are encouraged to [fork this project](https://help.github.com/articles/fork-a-repo/)!
+OSSU prospera gracias a los cambios realizados por nuestros muchos colaboradores. Sigue leyendo para obtener detalles sobre cómo ayudar a cada estudiante que te sigue.
+
+## Cambios no sustanciales
+
+Si tienes actualizaciones no sustanciales que hacer al currículo, como que se haya movido la URL de un curso, errores de ortografía/sintaxis, etc., por favor envía una [solicitud de extracción (pull request)](https://www.freecodecamp.org/news/how-to-make-your-first-pull-request-on-github-3/) para corregir los errores que hayas encontrado.
+
+## Cambios sustanciales
+
+Si tienes críticas específicas y sustanciales del currículo, es decir, problemas relacionados con la progresión/contenido de los cursos, sería apropiado [abrir una incidencia](https://help.github.com/articles/creating-an-issue/). Si bien es aceptable señalar problemas, todos los cambios exitosos requieren naturalmente un plan para solucionar el problema.
+Las directrices curriculares de OSSU están [aquí](CURRICULAR_GUIDELINES.md). Las críticas exitosas del currículo señalarán las formas en que OSSU no está cumpliendo con estas directrices. Ejemplos son:
+
+* OSSU lista un curso como obligatorio cuando los temas del curso son electivos en la guía curricular.
+* OSSU no tiene un curso para cubrir temas requeridos de la guía curricular.
+* OSSU lista múltiples cursos que cubren los mismos temas cuando menos cursos podrían ser suficientes.
+* OSSU recomienda un curso para enseñar un tema, pero existe un curso de mayor calidad que cubre el mismo material.
+
+## Otras formas de contribuir
+
+### Responder a incidencias
+
+Las incidencias requieren más que solo usuarios que las sugieran. Las incidencias requieren miembros activos de la comunidad que lean y respondan a las propuestas. Incluso agregar [reacciones con emojis](https://github.blog/2016-03-10-add-reactions-to-pull-requests-issues-and-comments/) simples puede ayudar a la comunidad.
+
+### Interactuar con otros estudiantes
+
+El aprendizaje se potencia con compañeros comprometidos. Tú puedes ser ese compañero para alguien nuevo en OSSU. Cuando veas a una persona nueva publicando en Discord, hazle una pregunta sobre sí misma. Cuando veas un grupo comenzando en _casi_ el momento adecuado, únete. Hacer esto hará que OSSU sea un programa más sólido para todos, incluyéndote a ti.
+
+# Personalización personal
+
+Si deseas personalizar el currículo para ti mismo, se te anima a [hacer una bifurcación (fork) de este proyecto](https://help.github.com/articles/fork-a-repo/)!
