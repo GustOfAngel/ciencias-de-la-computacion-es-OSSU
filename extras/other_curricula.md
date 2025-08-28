@@ -1,13 +1,13 @@
-# Other curricula
+# Otros currículos
 
-OSSU is one of a few efforts to inform learners how they can pursue computer science independently. Below are a few other such efforts.
+OSSU es uno de los pocos esfuerzos para informar a los estudiantes sobre cómo pueden estudiar ciencias de la computación de manera independiente. A continuación se presentan otros esfuerzos similares.
 
-- [Google - Guide for Technical Development](https://www.google.com/about/careers/students/guide-to-technical-development.html)
-- [Teach Yourself Computer Science](https://teachyourselfcs.com/)
-- [Obtaining a Thorough CS Background Online](http://spin.atomicobject.com/2015/05/15/obtaining-thorough-cs-background-online/)
+- [Google - Guía para el Desarrollo Técnico](https://www.google.com/about/careers/students/guide-to-technical-development.html)
+- [Enseña Tú Mismo Ciencias de la Computación](https://teachyourselfcs.com/)
+- [Obtención de una Base Sólida en CS en Línea](http://spin.atomicobject.com/2015/05/15/obtaining-thorough-cs-background-online/)
 - [P1xt](https://github.com/P1xt/p1xt-guides)
-- [Functional CS](https://functionalcs.github.io/curriculum/)
+- [CS Funcional](https://functionalcs.github.io/curriculum/)
 
-What differentiates OSSU? OSSU is dedicated to how an individual can learn the undergraduate CS curriculum. This is why we use the [CS2013](../CURRICULAR_GUIDELINES.md) as our curricular guidelines. These guidelines are written by the two foremost professional organizations in computing.
+¿Qué diferencia a OSSU? OSSU está dedicado a cómo una persona puede aprender el currículo de licenciatura en ciencias de la computación. Por eso utilizamos [CS2013](../CURRICULAR_GUIDELINES.md) como nuestras directrices curriculares. Estas directrices son elaboradas por las dos organizaciones profesionales más importantes en computación.
 
-This approach has the benefit of clarifying to others the extent of a student's study and understanding. Students have gone from OSSU study into both tech industry employment and into Computer Science graduate school. We look forward to helping you do the same.
+Este enfoque tiene la ventaja de clarificar para otros el alcance del estudio y comprensión de un estudiante. Algunos estudiantes han pasado de estudiar con OSSU a obtener empleo en la industria tecnológica y a ingresar a programas de posgrado en Ciencias de la Computación. Esperamos ayudarte a lograr lo mismo.
