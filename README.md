@@ -82,10 +82,10 @@ simplemente recuerda que ¡no puedes comprar el éxito!
 - También puedes interactuar a través de incidencias en GitHub. Si hay un problema con un curso o se necesita realizar un cambio en el currículo, este es el lugar para iniciar la conversación. Lee más [aquí](CONTRIBUTING.md).
 - ¡Agrega **Open Source Society University** a tu perfil de [LinkedIn](https://www.linkedin.com/school/11272443/)!
 
-> **Advertencia:** Hay algunos materiales de terceros/deprecated/anticuados que podrías encontrar al buscar OSSU. Te recomendamos ignorarlos y usar solo el [sitio web de OSSU CS](https://cs.ossu.dev) o el [repositorio de GitHub de OSSU CS](https://github.com/ossu/computer-science). Algunos materiales anticuados conocidos son:
+> **Advertencia:** Hay algunos materiales de terceros/obsoletos/anticuados que podrías encontrar al buscar OSSU. Te recomendamos ignorarlos y usar solo el [sitio web de OSSU CS](https://cs.ossu.dev) o el [repositorio de GitHub de OSSU CS](https://github.com/ossu/computer-science). Algunos materiales anticuados conocidos son:
 >
-> - Una aplicación firebase no mantenida y deprecated. Más información en las [preguntas frecuentes](./FAQ.md#why-is-the-firebase-ossu-app-different-or-broken).
-> - Un tablero de Trello no mantenido y deprecated
+> - Una aplicación firebase no mantenida y obsoleta. Más información en las [preguntas frecuentes](./FAQ.md#why-is-the-firebase-ossu-app-different-or-broken).
+> - Un tablero de Trello no mantenido y obsoleto
 > - Plantillas de Notion de terceros
 
 # Currículo
