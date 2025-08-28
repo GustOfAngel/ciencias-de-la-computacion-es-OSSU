@@ -1,9 +1,17 @@
-# Getting help
-## Check the FAQ!
-Please check our [Frequently Asked Questions](FAQ.md) to see if your question has been addressed.
-## Ask in the chat room
-[![Discord](https://img.shields.io/discord/744385009028431943.svg?label=&logo=discord&logoColor=ffffff&color=7389D8&labelColor=6A7EC2)](https://discord.gg/5pUhfpX) Join the OSSU [Discord server](https://discord.gg/5pUhfpX)! Discord is an online chat service, similar to Slack or IRC where you can chat with other students and get help.
-### Specific problems
-If you need help successfully completing the content of a course or are having general technical difficulties, first reach out to the resources provided by the course (e.g. the course forum on Coursera, edX, etc). If you need additional help after that, post in Discord. **In your post, mention what steps you have already taken to try and solve the problem**.
-### General problems
-If you have general problems with the program not specific to any course, such as preferring textbook-style learning over MOOCs, Discord is a good place to reach out to people who may have great suggestions. You might form a working group that makes the next improvement to OSSU CS! Read more about contributing [here](CONTRIBUTING.md).
+# Obtener ayuda
+
+## ¡Revisa las preguntas frecuentes!
+
+Por favor, consulta nuestras [Preguntas Frecuentes](FAQ.md) para ver si tu pregunta ya ha sido respondida.
+
+## Pregunta en la sala de chat
+
+[![Discord](https://img.shields.io/discord/744385009028431943.svg?label=&logo=discord&logoColor=ffffff&color=7389D8&labelColor=6A7EC2)](https://discord.gg/5pUhfpX) ¡Únete al [servidor de Discord](https://discord.gg/5pUhfpX) de OSSU! Discord es un servicio de chat en línea, similar a Slack o IRC, donde puedes conversar con otros estudiantes y obtener ayuda.
+
+### Problemas específicos
+
+Si necesitas ayuda para completar con éxito el contenido de un curso o estás teniendo dificultades técnicas generales, primero recurre a los recursos proporcionados por el curso (por ejemplo, el foro del curso en Coursera, edX, etc.). Si necesitas ayuda adicional después de eso, publica en Discord. **En tu publicación, menciona qué pasos ya has tomado para intentar resolver el problema**.
+
+### Problemas generales
+
+Si tienes problemas generales con el programa que no son específicos de ningún curso, como preferir el aprendizaje estilo libro de texto sobre los MOOC, Discord es un buen lugar para contactar a personas que pueden tener excelentes sugerencias. ¡Podrías formar un grupo de trabajo que haga la próxima mejora a OSSU CS! Más información sobre cómo contribuir [aquí](CONTRIBUTING.md).
