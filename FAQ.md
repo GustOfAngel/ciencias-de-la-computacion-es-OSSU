@@ -1,125 +1,130 @@
-# Frequently Asked Questions
+# Preguntas Frecuentes
 
-This page answers some questions that we frequently receive about the curriculum.
-If you have questions that aren't answered here, try asking through one of our [community channels](README.md#community).
-If it seems important enough or we get asked that question a lot, we will probably add it here.
+Esta página responde algunas preguntas que recibimos con frecuencia sobre el currículo.
+Si tienes preguntas que no se responden aquí, intenta preguntar a través de uno de nuestros [canales de comunidad](README.md#comunidad).
+Si parece lo suficientemente importante o recibimos muchas veces esa pregunta, probablemente la agregaremos aquí.
 
-Alternatively, you could [contribute](CONTRIBUTING.md) an answer yourself.
+Alternativamente, podrías [contribuir](CONTRIBUTING.md) tú mismo con una respuesta.
 
-## Contents
+## Contenido
 
-- [Does OSSU offer a degree?](#does-ossu-offer-a-degree)
-- [How can I review the math prerequisites?](#how-can-i-review-the-math-prerequisites)
-- [What is a good course to learn a language (C++, Rust, Java, etc)?](#what-is-a-good-course-to-learn-a-particular-language)
-- [Why is the Firebase OSSU app different/broken?](#why-is-the-firebase-ossu-app-different-or-broken)
-- [In what order should I take the courses?](#in-what-order-should-i-take-the-courses)
-- [Does every resource in the main curriculum have to be free?](#does-every-resource-in-the-main-curriculum-have-to-be-free)
-- [Are Coursera courses free to access?](#are-coursera-courses-free-to-access)
-- [Is it necessary to purchase the Verified Upgrade for edX courses?](#is-it-necessary-to-purchase-the-verified-upgrade-for-edx-courses)
-- [What are the alt links?](#what-are-the-alt-links)
-- [Why doesn't the curriculum cover/ignore topic X?](#why-doesnt-the-curriculum-coverignore-topic-x)
-- [Why is the curriculum missing some pre-requisites?](#why-is-the-curriculum-missing-some-pre-requisites)
-- [Why require experience with a sizable project before the Software Engineering courses?](#why-require-experience-with-a-sizable-project-before-the-software-engineering-courses)
-- [How can I find a course on a particular subject?](#how-can-i-find-a-course-on-a-particular-subject)
+- [Preguntas Frecuentes](#preguntas-frecuentes)
+  - [Contenido](#contenido)
+  - [Preguntas](#preguntas)
+    - [¿Ofrece OSSU un título universitario?](#ofrece-ossu-un-título-universitario)
+    - [¿Cómo puedo repasar los prerrequisitos de matemáticas?](#cómo-puedo-repasar-los-prerrequisitos-de-matemáticas)
+    - [¿Qué curso es bueno para aprender un lenguaje específico?](#qué-curso-es-bueno-para-aprender-un-lenguaje-específico)
+    - [¿Por qué la aplicación Firebase de OSSU es diferente o está rota?](#por-qué-la-aplicación-firebase-de-ossu-es-diferente-o-está-rota)
+    - [¿En qué orden debo tomar los cursos?](#en-qué-orden-debo-tomar-los-cursos)
+    - [¿Todos los recursos del currículo principal deben ser gratuitos?](#todos-los-recursos-del-currículo-principal-deben-ser-gratuitos)
+    - [¿Son gratuitos los cursos de Coursera?](#son-gratuitos-los-cursos-de-coursera)
+    - [¿Es necesario comprar la actualización verificada para los cursos de edX?](#es-necesario-comprar-la-actualización-verificada-para-los-cursos-de-edx)
+    - [¿Qué son los enlaces alternativos?](#qué-son-los-enlaces-alternativos)
+    - [¿Por qué el currículo no cubre/ignora el tema X?](#por-qué-el-currículo-no-cubreignora-el-tema-x)
+    - [¿Por qué al currículo le faltan algunos prerrequisitos?](#por-qué-al-currículo-le-faltan-algunos-prerrequisitos)
+    - [¿Por qué se requiere experiencia con un proyecto de cierta envergadura antes de los cursos de Ingeniería de Software?](#por-qué-se-requiere-experiencia-con-un-proyecto-de-cierta-envergadura-antes-de-los-cursos-de-ingeniería-de-software)
+    - [¿Cómo puedo encontrar un curso sobre un tema específico?](#cómo-puedo-encontrar-un-curso-sobre-un-tema-específico)
 
-## Questions
+## Preguntas
 
-### Does OSSU offer a degree?
-No. OSSU creates guides to resources that will empower you to learn the curriculum of an undergraduate degree. Individuals who used to be involved in OSSU may be working with other organizations to offer degrees, but Open Source Society University is not involved in those efforts.
+### ¿Ofrece OSSU un título universitario?
 
-### How can I review the math prerequisites?
+No. OSSU crea guías para recursos que te capacitarán para aprender el currículo de una licenciatura. Individuos que antes estuvieron involucrados en OSSU pueden estar trabajando con otras organizaciones para ofrecer títulos, pero Open Source Society University no participa en esos esfuerzos.
 
-See our [Pre-College Math](https://ossu.dev/precollege-math) curriculum for a list of resources to use for reviewing the math prerequisites.
+### ¿Cómo puedo repasar los prerrequisitos de matemáticas?
 
-### What is a good course to learn a particular language?
-OSSU focuses on finding the best courses to learn computer science topics, and isn’t focused on finding language-specific courses. If you are looking to learn a particular language or framework there are two great resources to check.
-1. [Hackr.io](https://hackr.io/) allows users to submit and upvote learning resources for topics such as Python or the Java Spring Framework.
-2. Most languages have a community on Reddit. When you find the community’s page, check to see if there is a wiki or sidebar with resources. For example, see [/r/python](https://old.reddit.com/r/Python). Note that the sidebar content can be different depending on whether you use www.reddit.com or old.reddit.com.
+Consulta nuestro currículo de [Matemáticas Preuniversitarias](https://ossu.dev/precollege-math) para una lista de recursos que puedes usar para repasar los prerrequisitos de matemáticas.
 
-### Why is the Firebase OSSU app different or broken?
+### ¿Qué curso es bueno para aprender un lenguaje específico?
 
-The OSSU curriculum and ecosystem have been collaboratively built by many individuals. The Firebase app was one such contribution. When it was written, it was with the intention of helping future OSSU students.
+OSSU se enfoca en encontrar los mejores cursos para aprender temas de ciencias de la computación, y no se centra en encontrar cursos específicos de lenguajes. Si estás buscando aprender un lenguaje o framework en particular, hay dos excelentes recursos para consultar.
 
-Unfortunately, the app has not been updated in many years. It does not reflect updates to the curriculum, it contains links to courses that no longer exist, and it has known bugs that prevent students from logging in.
+1. [Hackr.io](https://hackr.io/) permite a los usuarios enviar y votar recursos de aprendizaje para temas como Python o el framework Java Spring.
+2. La mayoría de los lenguajes tienen una comunidad en Reddit. Cuando encuentres la página de la comunidad, verifica si hay una wiki o barra lateral con recursos. Por ejemplo, consulta [/r/python](https://old.reddit.com/r/Python). Ten en cuenta que el contenido de la barra lateral puede variar según si usas www.reddit.com u old.reddit.com.
 
-It is our hope that the creators of the Firebase app can bring the app up to date. Until that time, the firebase app should be considered a deprecated product that is no longer supported.
+### ¿Por qué la aplicación Firebase de OSSU es diferente o está rota?
 
-### In what order should I take the courses?
+El currículo y ecosistema de OSSU han sido construidos colaborativamente por muchas personas. La aplicación Firebase fue una de esas contribuciones. Cuando se escribió, fue con la intención de ayudar a futuros estudiantes de OSSU.
 
-You have a few different options:
-- You can progress linearly from top to bottom of the page.
-- You can progress linearly through each individual section, but studying different sections in parallel.
-- You can design your own custom progression using the pre-requisites to guide you.
+Desafortunadamente, la aplicación no ha sido actualizada en muchos años. No refleja las actualizaciones del currículo, contiene enlaces a cursos que ya no existen y tiene errores conocidos que impiden que los estudiantes inicien sesión.
 
-We have designed the curriculum to work for any of the above three styles.
+Esperamos que los creadores de la aplicación Firebase puedan actualizarla. Hasta ese momento, la aplicación Firebase debe considerarse un producto obsoleto que ya no recibe soporte.
 
-### Does every resource in the main curriculum have to be free?
+### ¿En qué orden debo tomar los cursos?
 
-Yes, that is a core goal of OSSU.
+Tienes varias opciones diferentes:
 
-At the same time, we recognize that education is a resource that requires payment to instructors to make it sustainable in the long term.
-Therefore, we respect the business model of websites like edX, which make their materials free but with some paid add-ons, like official certificates or extra interaction with course instructors.
+- Puedes avanzar linealmente de arriba a abajo en la página.
+- Puedes avanzar linealmente a través de cada sección individual, pero estudiando diferentes secciones en paralelo.
+- Puedes diseñar tu propio progreso personalizado utilizando los prerrequisitos como guía.
 
-So we only require that the *learning materials* of a resource be free to access, not that every possible add-on be free.
-It would be ideal if graded assignments were always free. In the event that free assessments are not available OSSU looks for alternate assessments to pair with a course.
+Hemos diseñado el currículo para funcionar con cualquiera de los tres estilos anteriores.
 
-### Are Coursera courses free to access?
+### ¿Todos los recursos del currículo principal deben ser gratuitos?
 
-Some courses that require payment to access probably do exist on Coursera, but we don't put those on our curriculum.
-All Coursera courses that we put on the curriculum must, at minimum, be **free to audit**.
-For some courses, all course features are available for free;
-for others (especially those that are part of a specialization), you may only be able to access the lecture videos.
-(If you find the policies have changed for any courses on our curriculum, please tell us!)
+Sí, ese es un objetivo fundamental de OSSU.
 
-Unfortunately, for some courses, Coursera's interface is [very aggressive](https://www.deceptive.design/) about convincing you that you have to pay.
+Al mismo tiempo, reconocemos que la educación es un recurso que requiere pago a los instructores para ser sostenible a largo plazo.
+Por lo tanto, respetamos el modelo de negocio de sitios web como edX, que hacen sus materiales gratuitos pero con algunos complementos de pago, como certificados oficiales o interacción adicional con los instructores del curso.
 
-You may see something like this on the course page:
+Así que solo exigimos que los *materiales de aprendizaje* de un recurso sean gratuitos, no que todos los complementos posibles sean gratuitos.
+Sería ideal que las tareas calificadas siempre fueran gratuitas. En caso de que no estén disponibles evaluaciones gratuitas, OSSU busca evaluaciones alternativas para emparejar con un curso.
 
-<img src="http://i.imgur.com/MxOcYZv.png" alt="Free Trial" style="width: 400px;"/>
+### ¿Son gratuitos los cursos de Coursera?
 
-When attempting to enroll in such a course:
-- Click the blue "Enroll" or "Enroll Now" button.
-- A pop-up will appear.
-- **Do not click** "Start Free Trial", unless you do want to pay.
-- Find the text that says "Audit this course" at the bottom.
-- Click **Audit**.
+Es probable que existan algunos cursos en Coursera que requieren pago para acceder, pero no los incluimos en nuestro currículo.
+Todos los cursos de Coursera que incluimos en el currículo deben ser, como mínimo, **gratuitos para auditar**.
+Para algunos cursos, todas las características del curso están disponibles de forma gratuita;
+para otros (especialmente aquellos que forman parte de una especialización), es posible que solo puedas acceder a los videos de las clases.
+(¡Si notas que las políticas han cambiado para algún curso en nuestro currículo, háznoslo saber!)
 
-![Audit this course](https://user-images.githubusercontent.com/3349406/27321369-95ca12e6-55cc-11e7-9b5c-f8fedd8fd643.png)
+Desafortunadamente, para algunos cursos, la interfaz de Coursera es [muy agresiva](https://www.deceptive.design/) al convencerte de que debes pagar.
 
-### Is it necessary to purchase the Verified Upgrade for edX courses?
+Es posible que veas algo así en la página del curso:
 
-If you just want to watch the videos, it is never necessary for any edX course on our curriculum. Note that a number of edX courses only allow students to audit a course for the estimated number of weeks it takes to complete. Students should not begin a course until they are prepared to focus and complete the course.
+<img src="http://i.imgur.com/MxOcYZv.png" alt="Prueba gratuita" style="width: 400px;"/>
 
-### What are the alt links?
+Al intentar inscribirte en dicho curso:
 
-Sometimes a course is on multiple platforms that are reasonably similar in quality so we have an alt or two linked in case the main one isn't being offered at the time or you prefer the other one. Both are just as good, go with whichever you prefer or whichever is available when you want to take the course.
+- Haz clic en el botón azul "Inscribirse" o "Inscribirse ahora".
+- Aparecerá una ventana emergente.
+- **No hagas clic** en "Iniciar prueba gratuita", a menos que quieras pagar.
+- Busca el texto que dice "Auditar este curso" en la parte inferior.
+- Haz clic en **Auditar**.
 
-### Why doesn't the curriculum cover/ignore topic X?
+![Auditar este curso](https://user-images.githubusercontent.com/3349406/27321369-95ca12e6-55cc-11e7-9b5c-f8fedd8fd643.png)
 
-You can read more about our curricular guidelines and the qualifications of the guidelines' authors [here](CURRICULAR_GUIDELINES.md). If you find a topic that is required by our guidelines and is not included in the curriculum, we should make a change! Read more about [contributing to a change](CONTRIBUTING.md).
+### ¿Es necesario comprar la actualización verificada para los cursos de edX?
 
-### Why is the curriculum missing some pre-requisites?
+Si solo quieres ver los videos, nunca es necesario para ningún curso de edX en nuestro currículo. Ten en cuenta que varios cursos de edX solo permiten a los estudiantes auditar un curso durante el número estimado de semanas que lleva completarlo. Los estudiantes no deben comenzar un curso hasta que estén preparados para enfocarse y completarlo.
 
-The curriculum assumes two things:
-- You are reasonably fluent in English.
-- You have gotten through a standard high school curriculum that included physics and pre-calculus.
+### ¿Qué son los enlaces alternativos?
 
-Without these assumptions, the curriculum would be out of control with trying to fill in your knowledge gaps.
-For those who want to study math pre-requisites, read more [here](#how-can-i-review-the-math-prerequisites)
+A veces un curso está en múltiples plataformas que son razonablemente similares en calidad, por lo que tenemos uno o dos enlaces alternativos en caso de que el principal no se esté ofreciendo en el momento o prefieras el otro. Ambos son igual de buenos, elige el que prefieras o el que esté disponible cuando quieras tomar el curso.
 
-Of course, if you find that the curriculum is missing a pre-requisite for a course that isn't part of a normal high school curriculum, please let us know!
+### ¿Por qué el currículo no cubre/ignora el tema X?
 
-### Why require experience with a sizable project before the Software Engineering courses?
-Software engineering tries to solve the problem of dealing with large programs. Building a sizable program before taking the SE courses will help you understand what SE is trying to solve. We recommend the Jack-to-VM-code compiler project from the nand2tetris course because it's the first project in the curriculum that is complex enough to see value in an SE course. That said, any sizable project will do and can come from outside of the OSSU curriculum. The idea is that you've done some large enough project where the pieces started to feel unmanageable. This experience will expose pain points and lead to a better understanding of SE.
+Puedes leer más sobre nuestras directrices curriculares y las calificaciones de los autores de las directrices [aquí](CURRICULAR_GUIDELINES.md). Si encuentras un tema que es requerido por nuestras directrices y no está incluido en el currículo, ¡deberíamos hacer un cambio! Lee más sobre [contribuir a un cambio](CONTRIBUTING.md).
 
-### How can I find a course on a particular subject?
-After completing Core CS, learners are ready to pursue computer science
-topics of their own interest. How can one find a course on a given topic?
-For MOOCs an excellent resource is [Class Central](https://www.classcentral.com/).
-For materials from university courses that are online (but not organized)
-into a MOOC, [awesome-courses](https://github.com/prakhar1989/awesome-courses) and
-[cs-video-courses](https://github.com/Developer-Y/cs-video-courses)
-are good resources. For textbooks, [Goodreads](https://www.goodreads.com/genres/computer-science)
-is a great platform for reader ratings and reviews.
-For learning a particular programming language or framework,
-[see this question](#what-is-a-good-course-to-learn-a-particular-language).
+### ¿Por qué al currículo le faltan algunos prerrequisitos?
+
+El currículo asume dos cosas:
+
+- Tienes un dominio razonable del inglés.
+- Has completado un currículo estándar de secundaria que incluyó física y precálculo.
+
+Sin estas suposiciones, el currículo estaría fuera de control intentando llenar tus lagunas de conocimiento.
+Para aquellos que desean estudiar los prerrequisitos de matemáticas, lee más [aquí](#cómo-puedo-repasar-los-prerrequisitos-de-matemáticas)
+
+Por supuesto, si encuentras que al currículo le falta un prerrequisito para un curso que no forma parte de un currículo normal de secundaria, ¡háznoslo saber!
+
+### ¿Por qué se requiere experiencia con un proyecto de cierta envergadura antes de los cursos de Ingeniería de Software?
+
+La ingeniería de software intenta resolver el problema de manejar programas grandes. Construir un programa de cierta envergadura antes de tomar los cursos de SE te ayudará a entender qué es lo que la SE intenta resolver. Recomendamos el proyecto del compilador de Jack a código VM del curso nand2tetris porque es el primer proyecto en el currículo que es lo suficientemente complejo para ver el valor en un curso de SE. Dicho esto, cualquier proyecto de cierta envergadura servirá y puede provenir fuera del currículo de OSSU. La idea es que hayas realizado algún proyecto lo suficientemente grande donde las piezas comenzaron a sentirse inmanejables. Esta experiencia expondrá puntos críticos y conducirá a una mejor comprensión de la SE.
+
+### ¿Cómo puedo encontrar un curso sobre un tema específico?
+
+Después de completar CS Fundamental, los estudiantes están listos para profundizar en temas de ciencias de la computación de su propio interés. ¿Cómo puede uno encontrar un curso sobre un tema determinado?
+Para MOOCs, un excelente recurso es [Class Central](https://www.classcentral.com/).
+Para materiales de cursos universitarios que están en línea (pero no organizados) en un MOOC, [awesome-courses](https://github.com/prakhar1989/awesome-courses) y [cs-video-courses](https://github.com/Developer-Y/cs-video-courses) son buenos recursos. Para libros de texto, [Goodreads](https://www.goodreads.com/genres/computer-science) es una gran plataforma para calificaciones y reseñas de lectores.
+Para aprender un lenguaje o framework de programación en particular, [consulta esta pregunta](#qué-curso-es-bueno-para-aprender-un-lenguaje-específico).
