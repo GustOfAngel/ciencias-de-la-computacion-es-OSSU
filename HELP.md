@@ -1,6 +1,6 @@
 # Obtener ayuda
 
-## ¡Revisa las preguntas frecuentes!
+## ¡Consulta las preguntas frecuentes (FAQ)!
 
 Por favor, consulta nuestras [Preguntas Frecuentes](FAQ.md) para ver si tu pregunta ya ha sido respondida.
 
@@ -10,8 +10,8 @@ Por favor, consulta nuestras [Preguntas Frecuentes](FAQ.md) para ver si tu pregu
 
 ### Problemas específicos
 
-Si necesitas ayuda para completar con éxito el contenido de un curso o estás teniendo dificultades técnicas generales, primero recurre a los recursos proporcionados por el curso (por ejemplo, el foro del curso en Coursera, edX, etc.). Si necesitas ayuda adicional después de eso, publica en Discord. **En tu publicación, menciona qué pasos ya has tomado para intentar resolver el problema**.
+Si necesitas ayuda para completar con éxito el contenido de un curso o tienes dificultades técnicas generales, primero recurre a los recursos proporcionados por el propio curso (por ejemplo, el foro del curso en Coursera, edX, etc.). Si después de eso necesitas ayuda adicional, publica tu duda en Discord. **En tu publicación, menciona qué pasos ya has seguido para intentar resolver el problema**.
 
 ### Problemas generales
 
-Si tienes problemas generales con el programa que no son específicos de ningún curso, como preferir el aprendizaje estilo libro de texto sobre los MOOC, Discord es un buen lugar para contactar a personas que pueden tener excelentes sugerencias. ¡Podrías formar un grupo de trabajo que haga la próxima mejora a OSSU CS! Más información sobre cómo contribuir [aquí](CONTRIBUTING.md).
+Si tienes problemas generales con el programa que no son específicos de ningún curso, como preferir el aprendizaje basado en libros de texto en lugar de los MOOCs, Discord es un buen lugar para contactar a personas que puedan tener excelentes sugerencias. ¡Podrías formar un grupo de trabajo que realice la próxima mejora para OSSU CS! Lee más sobre cómo contribuir [aquí](CONTRIBUTING.md).
