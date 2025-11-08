@@ -1,6 +1,6 @@
 ### todo gracias a [palladian](https://github.com/palladian1)
 
-- Antes de comenzar el curso: `initial-utilities` (también conocido como proyecto 1a) y `initial-reverse` (no asignado en clase)
+- Antes de comenzar el curso: `initial-utilities` (también conocido como proyecto 1a) e `initial-reverse` (no asignado en clase)
 - Capítulo 5: `processes-shell` (proyecto 2a)
 - Capítulo 6: `initial-xv6` (proyecto 1b, pero solo preocúpate por la prueba 1)
 - Capítulo 9: `scheduling-xv6-lottery` (proyecto 2b)
@@ -10,4 +10,4 @@
 - Capítulo 30: `concurrency-mapreduce` (proyecto 4a)
 - Capítulo 33: `concurrency-webserver` (no asignado en clase)
 - Capítulo 42: `filesystems-checker` (proyecto 5a)
-- (no existe el 5b, y no hay proyectos para los capítulos 43-51)
+- (no hay 5b, y no hay proyectos para los capítulos 43-51)
